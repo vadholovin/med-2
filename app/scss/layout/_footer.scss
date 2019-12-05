@@ -1,0 +1,106 @@
+/* ==========================================================================
+   #FOOTER
+   ========================================================================== */
+
+.footer {
+  text-transform: none;
+}
+
+.footer-top {
+  font-size: rem(16px);
+  background-color: $bg-grey;
+  color: #fff;
+
+  @include for-size(md-up) {
+    font-size: rem(18px);
+  }
+
+  @include for-size(xl-up) {
+    font-size: rem(20px);
+  }
+}
+
+.footer-top__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: rem(22px);
+  padding-bottom: rem(22px);
+  
+
+  @include for-size(xs-only) {
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: rem(40px);
+  }
+}
+
+.footer-top__name {
+  font-weight: bold;
+  font-size: rem(25px);
+  margin-right: auto;
+
+  @include for-size(xs-only) {
+    margin-right: 0;
+    margin-bottom: rem(20px);
+  }
+
+  @include for-size(lg-up) {
+    font-size: rem(30px);
+  }
+}
+
+
+
+.footer-mid {
+  padding-top: rem(30px);
+  padding-bottom: rem(50px);
+  font-size: rem(16px);
+
+  @include for-size(xs-only) {
+    text-align: center;
+  }
+
+  @include for-size(xl-up) {
+    padding-top: rem(100px);
+    padding-bottom: rem(60px);
+    font-size: rem(20px);
+  }
+
+  p + p {
+    margin-top: rem(24px);
+
+    @include for-size(lg-up) {
+      margin-top: rem(48px);
+    }
+  }
+}
+
+.footer-mid__foot {
+  margin-top: rem(56px);
+
+  @include for-size(lg-up) {
+    margin-top: rem(100px);
+  }
+}
+
+.footer-bottom {
+  padding-top: rem(30px);
+  padding-bottom: rem(30px);
+  background-color: $bg-grey;
+  color: #fff;
+  text-align: center;
+
+  padding-top: rem(25px);
+  padding-bottom: rem(18px);
+
+  p {
+    font-weight: bold;
+    font-size: rem(22px);
+    text-transform: uppercase;
+
+    @include for-size(xl-up) {
+      font-size: rem(30px);
+    }
+  }
+}

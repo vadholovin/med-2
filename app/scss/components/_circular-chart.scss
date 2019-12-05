@@ -1,0 +1,59 @@
+/* ==========================================================================
+   #CIRCULAR-CHART
+   ========================================================================== */
+
+.single-chart {
+  position: relative;
+}
+
+.single-chart::before {
+  content: '';
+  float: left;
+  padding-top: 100%;
+}
+
+.single-chart::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.circular-chart {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.circular-chart__circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 5px;
+}
+
+.circular-chart__circle-top {
+  fill: #fff;
+}
+
+.circular-chart__circle {
+  fill: none;
+  stroke: $green-border-light;
+  stroke-width: 5px;
+  stroke-linecap: round;
+}
+
+.single-chart__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: rem(48px);
+  width: 62.5%;
+  height: 62.5%;
+  border-radius: 50%;
+  box-shadow: $shadow;
+}

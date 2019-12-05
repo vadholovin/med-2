@@ -1,0 +1,17 @@
+/* ==========================================================================
+   #BASIC TYPOGRAPHY STYLES
+   ========================================================================== */
+html {
+  font-size: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+body {
+  font-weight: normal;
+  font-family: $font-main;
+  font-size: rem(18px);
+  line-height: 1.22;
+  color: $text-color;
+  // letter-spacing: 0.02em;
+}

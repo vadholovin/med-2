@@ -1,0 +1,43 @@
+//Colors
+$grey: #000;
+$grey-lighter: #eee;
+$green-light: #4ec708;
+$green: #48c300;
+$green-darker: #155542;
+
+
+$text-color: $grey !default;
+$text-green: $green-darker !default;
+$highlight: $green-darker !default;
+
+$bg-green: $green-darker !default;
+$bg-green-light: $green !default;
+$bg-grey: $grey !default;
+$bg-grey-lighter: $grey-lighter !default;
+
+$green-border-light: $green-light !default;
+$green-border: $green-darker !default;
+$grey-border: $grey-lighter !default;
+
+$gradient: linear-gradient(180deg, #48C300 0%, #88E750 100%);
+$gradient-red: linear-gradient(180deg, #C73608 0%, #F77B54 100%);
+
+$shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+$shadow-darker: 0 4px 25px rgba(0, 0, 0, 0.25);
+
+
+//Fonts
+$font-main: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$font-secondary: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+//Breakpoints
+$phone-upper-boundary: 600px;
+$tablet-portrait-upper-boundary: 900px;
+$tablet-landscape-upper-boundary: 1200px;
+$desktop-upper-boundary: 1440px;
+$desktop-wide-upper-boundary: 1800px;
+
+
+//Easing
+$ease-main: .2s ease-in-out; 

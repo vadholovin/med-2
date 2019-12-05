@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Дриптан</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,800|Roboto:400,900&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="libs/jquery-modal/jquery.modal.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="container">
+        <div class="header__row">
+          <a href="/" class="logo logo--header">
+            <svg class="logo-icon" viewBox="0 0 165 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 18.8088L18.1184 3.35441C23.2641 -1.03483 30.759 -1.06179 35.9131 2.95191C31.2288 1.13463 25.6992 1.88011 21.6351 5.34667L3.51672 20.801L0 18.8088Z" fill="#EF7C00"/>
+              <path d="M6.66864 22.5866L24.7869 7.13236C29.9326 2.74304 37.4275 2.71617 42.5816 6.72987C37.8972 4.91259 32.3678 5.65806 28.3035 9.12462L10.1853 24.579L6.66864 22.5866Z" fill="#EF7C00"/>
+              <path d="M13.3363 26.3649L31.4546 10.9102C36.6002 6.5211 44.0952 6.49415 49.2493 10.5077C44.5651 8.69056 39.0355 9.43594 34.9713 12.9026L16.853 28.3571L13.3363 26.3649Z" fill="#EF7C00"/>
+              <path d="M57.7423 27.1907L39.6235 42.6457C34.4777 47.0348 26.9829 47.0618 21.8287 43.0483C26.513 44.8653 32.0425 44.1201 36.1068 40.6534L54.2259 25.1984L57.7423 27.1907Z" fill="#C70B6F"/>
+              <path d="M51.0749 23.413L32.9561 38.8679C27.8103 43.2571 20.3152 43.2842 15.1613 39.2703C19.8454 41.0877 25.375 40.3421 29.4391 36.8757L47.5582 21.4205L51.0749 23.413Z" fill="#C70B6F"/>
+              <path d="M44.4061 19.6348L26.2871 35.0899C21.1413 39.4793 13.6464 39.5061 8.49249 35.4925C13.1767 37.3099 18.7063 36.5643 22.7704 33.0976L40.8894 17.6425L44.4061 19.6348Z" fill="#C70B6F"/>
+              <path d="M85.0288 19.3199C85.0288 14.7606 82.9786 11.9599 76.0939 11.9599C73.3404 11.9599 70.4901 12.6033 68.3393 13.3628L68.812 17.881C70.6196 16.8675 73.2011 16.2343 75.1374 16.2343C78.2356 16.2343 79.311 17.374 79.311 19.5695V20.7098C72.0397 20.7098 66.9618 23.3692 66.9618 28.3937C66.9618 31.7717 69.1849 34.04 73.0572 34.04C76.2415 34.04 78.9739 32.0916 80.0066 29.7274L79.9565 29.9561C79.7844 31.054 79.4225 32.8152 79.4225 34.04H85.0288V19.3199ZM79.311 24.721C79.311 27.254 77.4609 29.7872 74.75 29.7872C73.1586 29.7872 72.2117 28.9009 72.2117 27.5493C72.2117 25.8608 73.5024 24.214 79.311 24.214V24.721Z" fill="#39434D"/>
+              <path d="M104.65 33.0535L104.209 28.3804C103.017 28.9811 101.385 29.2806 99.8846 29.2806C96.1346 29.2806 94.6783 26.794 94.6783 23.1501C94.6783 19.1195 96.4873 16.5473 100.061 16.5473C101.474 16.5473 102.841 16.8901 104.033 17.3191L104.606 12.5599C103.194 12.1738 101.606 11.9599 100.106 11.9599C92.3401 11.9599 88.7658 17.062 88.7658 23.7075C88.7658 30.9529 92.5604 34.04 98.6495 34.04C100.988 34.04 103.15 33.6108 104.65 33.0535Z" fill="#39434D"/>
+              <path d="M139.223 18.5149C139.223 14.8908 137.665 11.9599 132.82 11.9599C129.316 11.9599 126.807 13.6677 125.509 16.125L125.465 16.0836C125.683 15.0006 126.142 12.9179 126.142 11.9599H120.534V34.04H126.142V23.1149C126.142 19.4915 128.278 16.4166 131.09 16.4166C133.123 16.4166 133.617 17.6139 133.617 19.7799V34.04H139.223V18.5149Z" fill="#39434D"/>
+              <path d="M164.45 22.5944C164.45 15.2911 160.601 11.9599 154.637 11.9599C148.25 11.9599 143.894 16.7431 143.894 23.3628C143.894 30.9223 147.742 34.04 153.707 34.04C160.009 34.04 164.45 29.2565 164.45 22.5944ZM158.867 22.893C158.867 27.2071 156.837 29.385 154.172 29.385C151.042 29.385 149.476 27.1641 149.476 22.8075C149.476 18.4518 151.845 16.5723 154.257 16.5723C157.428 16.5723 158.867 18.7932 158.867 22.893Z" fill="#39434D"/>
+              <path d="M114.928 34.04V11.9599H109.322V34.04H114.928Z" fill="#39434D"/>
+              <path d="M114.928 6.42227C114.928 4.89093 113.659 3.68021 112.108 3.68021C110.556 3.68021 109.322 4.92681 109.322 6.42227C109.322 7.95417 110.556 9.20021 112.108 9.20021C113.659 9.20021 114.928 7.95417 114.928 6.42227Z" fill="#39434D"/>
+            </svg>
+          </a>
+
+          <p class="header__info">
+            Информация для медицинских специалистов
+          </p>
+        </div>
+      </div>
+    </header>
+
+
+    <main class="main">
+
+      <div class="hero">
+        <div class="container">
+          <h1 class="hero__title title">
+            <span class="hero__title--bigger">Лечение ГМП</span>
+            <span class="hero__title--smaller">Информация для медицинских специалистов</span>
+          </h1>
+        </div>
+      </div>
+
+
+      <section class="patient">
+        <div class="container">
+          <h2 class="patient__title title">
+            Наиболее часто <sup>1</sup>
+            <br>
+            обращаются по поводу
+            ургентного недержания
+          </h2>
+
+          <div class="patient-charts">
+
+            <div class="patient-charts__item">
+              <div class="patient-charts__graph">
+                <span class="patient-charts__graph-value">6.5%</span>
+                <div class="patient-charts__graph-fill patient-charts__graph-fill--6-5"></div>
+              </div>
+              <h3 class="patient-charts__heading">
+                <b>Мужчины</b><br>
+                30-59 лет
+              </h3>
+            </div>
+
+            <div class="patient-charts__item">
+              <div class="patient-charts__graph">
+                <span class="patient-charts__graph-value">6.5%</span>
+                <div class="patient-charts__graph-fill patient-charts__graph-fill--6-5"></div>
+              </div>
+              <h3 class="patient-charts__heading">
+                <b>Мужчины</b><br>
+                60+ лет
+              </h3>
+            </div>
+
+            <div class="patient-charts__item">
+              <div class="patient-charts__graph patient-charts__graph--filled">
+                <span class="patient-charts__graph-value">44%</span>
+                <div class="patient-charts__graph-fill patient-charts__graph-fill--44"></div>
+              </div>
+              <h3 class="patient-charts__heading">
+                <b>Женщины</b><br>
+                30-59 лет
+              </h3>
+            </div>
+
+            <div class="patient-charts__item">
+              <div class="patient-charts__graph patient-charts__graph--filled">
+                <span class="patient-charts__graph-value">43%</span>
+                <div class="patient-charts__graph-fill patient-charts__graph-fill--43"></div>
+              </div>
+              <h3 class="patient-charts__heading">
+                <b>Женщины</b><br>
+                60+ лет
+              </h3>
+            </div>
+
+          </div><!-- .patient-charts end -->
+        </div>
+      </section>
+
+
+      <section class="therapy">
+        <div class="container">
+          <h2 class="therapy__title title">
+              Женщинам с ГМП
+              старше пятидесяти лет
+              обычно рекомендуют <sup>1</sup> :
+          </h2>
+
+          <div class="therapy-graphs">
+
+            <div class="therapy-graph therapy-graph--top">
+              <div class="progress__wrapper">
+                <svg class="progress progress--desktop" width="300" height="300" viewBox="0 0 300 300">
+                  <circle class="progress__meter" cx="150" cy="150" r="130" />
+                  <circle class="progress__value" cx="150" cy="150" r="130" stroke-dasharray="816.814" stroke-dashoffset="171.53" />
+                </svg>
+                <svg class="progress progress--mobile" width="218" height="218" viewBox="0 0 218 218">
+                  <circle class="progress__meter" cx="109" cy="109" r="89" />
+                  <circle class="progress__value" cx="109" cy="109" r="89" stroke-dasharray="559.2" stroke-dashoffset="117.432" />
+                </svg>
+                <div class="progress__text">79%</div>
+              </div>
+              <h3 class="therapy-graph__heading">M-ХОЛИНОЛИТИКИ</h3>
+            </div>
+
+            <div class="therapy-graphs__list">
+              <div class="therapy-graph">
+                <div class="progress__wrapper">
+                  <svg class="progress progress--desktop" width="218" height="218" viewBox="0 0 218 218">
+                    <circle class="progress__meter" cx="109" cy="109" r="89" />
+                    <circle class="progress__value" cx="109" cy="109" r="89" stroke-dasharray="559.2" stroke-dashoffset="178.944" />
+                  </svg>
+                  <div class="progress__text">68%</div>
+                </div>
+                <h3 class="therapy-graph__heading">Тренировка мышц тазового дна</h3>
+              </div>
+
+              <div class="therapy-graph">
+                <div class="progress__wrapper">
+                  <svg class="progress progress--desktop" width="218" height="218" viewBox="0 0 218 218">
+                    <circle class="progress__meter" cx="109" cy="109" r="89" />
+                    <circle class="progress__value" cx="109" cy="109" r="89" stroke-dasharray="559.2" stroke-dashoffset="318.744" />
+                  </svg>
+                  <div class="progress__text">43%</div>
+                </div>
+                <h3 class="therapy-graph__heading">Местная ЗГТ</h3>
+              </div>
+
+              <div class="therapy-graph">
+                <div class="progress__wrapper">
+                  <svg class="progress progress--desktop" width="218" height="218" viewBox="0 0 218 218">
+                    <circle class="progress__meter" cx="109" cy="109" r="89" />
+                    <circle class="progress__value" cx="109" cy="109" r="89" stroke-dasharray="559.2" stroke-dashoffset="240.456" />
+                  </svg>
+                  <div class="progress__text">57%</div>
+                </div>
+                <h3 class="therapy-graph__heading">Тренировка мочевого пузыря</h3>
+              </div>
+
+              <div class="therapy-graph">
+                <div class="progress__wrapper">
+                  <svg class="progress progress--desktop" width="218" height="218" viewBox="0 0 218 218">
+                    <circle class="progress__meter" cx="109" cy="109" r="89" />
+                    <circle class="progress__value" cx="109" cy="109" r="89" stroke-dasharray="559.2" stroke-dashoffset="352.296" />
+                  </svg>
+                  <div class="progress__text">37%</div>
+                </div>
+                <h3 class="therapy-graph__heading">Другая терапия</h3>
+              </div>
+
+            </div><!-- .therapy-graphs__list end -->
+
+
+            <div class="therapy-graphs__line"></div>
+
+            <div class="arrow-bar arrow-bar--therapy">
+              <span class="arrow-bar__dots">
+                <span class="arrow-bar__dot"></span>
+              </span>
+              <svg class="arrow-bar__arrow" width="40" height="35" viewBox="0 0 40 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 35L0.0814163 0.5L39.9186 0.500004L20 35Z" fill="#EEEEEE"/>
+              </svg>
+            </div>
+          </div>
+
+          <p class="therapy__info title">
+            <span class="therapy__info--highlight">79%</span> урологов<br>
+            применяют дриптан в своей
+            клинической практике <sup>1</sup>
+          </p>
+        </div>
+      </section>
+
+
+      <section class="efficiency">
+        <div class="container">
+          <h2 class="efficiency__title title">
+            Эффективность дриптана
+            <br>
+            и других м-холинолитиков
+          </h2>
+          <p class="efficiency__subtitle subtitle">
+            Среднее изменение частоты эпизодов нм за сутки
+          </p>
+
+          <div class="efficiency-charts">
+
+            <div class="efficiency-chart">
+              <div class="efficiency-graph">
+                <div class="efficiency-graph__aside">
+                  <span>1</span>
+                  <span>2</span>
+                  <span>3</span>
+                </div>
+
+                <div class="efficiency-graph__body">
+                  <div class="efficiency-graph__body-scale"></div>
+                  <div class="efficiency-graph__bar">
+                    <span class="efficiency-graph__bar-value">2.7</span>
+                    <span class="efficiency-graph__bar-fill efficiency-graph__bar-fill--2-7 green"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="efficiency-chart__foot">
+                <div class="efficiency-chart__heading">
+                  Оксибутинин
+                  <br>
+                  3.9 мг/сутки
+                </div>
+                <div class="efficiency-chart__notes">Dmochowski, 2002<sup>3</sup></div>
+              </div>
+            </div><!-- .efficiency-chart end -->
+
+            <div class="efficiency-chart">
+              <div class="efficiency-graph">
+                <div class="efficiency-graph__aside">
+                  <span>1</span>
+                  <span>2</span>
+                  <span>3</span>
+                </div>
+
+                <div class="efficiency-graph__body">
+                  <div class="efficiency-graph__body-scale"></div>
+                  <div class="efficiency-graph__bar">
+                    <span class="efficiency-graph__bar-value">1.9</span>
+                    <span class="efficiency-graph__bar-fill efficiency-graph__bar-fill--1-9 red"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="efficiency-chart__foot">
+                <div class="efficiency-chart__heading">
+                  Троспиум
+                  <br>
+                  40 мг/сутки
+                </div>
+                <div class="efficiency-chart__notes">Rudy D, 2006<sup>4</sup></div>
+              </div>
+            </div><!-- .efficiency-chart end -->
+
+            <div class="efficiency-chart">
+              <div class="efficiency-graph">
+                <div class="efficiency-graph__aside">
+                  <span>1</span>
+                  <span>2</span>
+                  <span>3</span>
+                </div>
+
+                <div class="efficiency-graph__body">
+                  <div class="efficiency-graph__body-scale"></div>
+                  <div class="efficiency-graph__bar">
+                    <span class="efficiency-graph__bar-value">1.4</span>
+                    <span class="efficiency-graph__bar-fill efficiency-graph__bar-fill--1-4 red"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="efficiency-chart__foot">
+                <div class="efficiency-chart__heading">
+                  Солифенацин
+                  <br>
+                  10 мг/сутки
+                </div>
+                <div class="efficiency-chart__notes">Chapple, 2004<sup>5</sup></div>
+              </div>
+            </div><!-- .efficiency-chart end -->
+
+            <div class="efficiency-chart">
+              <div class="efficiency-graph">
+                <div class="efficiency-graph__aside">
+                  <span>1</span>
+                  <span>2</span>
+                  <span>3</span>
+                </div>
+
+                <div class="efficiency-graph__body">
+                  <div class="efficiency-graph__body-scale"></div>
+                  <div class="efficiency-graph__bar">
+                    <span class="efficiency-graph__bar-value">1.1</span>
+                    <span class="efficiency-graph__bar-fill efficiency-graph__bar-fill--1-1 red"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="efficiency-chart__foot">
+                <div class="efficiency-chart__heading">
+                  Толтеродин IR
+                  <br>
+                  4 мг/сутки
+                </div>
+                <div class="efficiency-chart__notes">Chapple, 2004<sup>5</sup></div>
+              </div>
+            </div><!-- .efficiency-chart end -->
+
+          </div>
+
+          <div class="arrow-bar arrow-bar--efficiency">
+            <span class="arrow-bar__dots">
+              <span class="arrow-bar__dot"></span>
+            </span>
+            <svg class="arrow-bar__arrow" width="40" height="35" viewBox="0 0 40 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 35L0.0814163 0.5L39.9186 0.500004L20 35Z" fill="#EEEEEE"/>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      
+      <section class="results">
+        <div class="container">
+          <h2 class="results__title title">
+            Терапия оксибутинином
+            вызывала клиническое
+            улучшение у 76%
+            <br>
+            взрослых пациентов <sup>2</sup>
+          </h2>
+          <p class="results__subtitle subtitle">Терапия оксибутинином 10 мг 12 недель:</p>
+
+          <figure class="results__img">
+            <img src="img/general/pie.png"
+                srcset="img/general/pie@2x.png 2x"
+                width="623" alt="">
+          </figure>
+        </div>
+
+        <div class="container">
+          <p class="results__info">
+            Возможность гибкого дозирования позволяет подходить индивидуального к
+            каждому больному в зависимости 
+            от тяжести симптоматики и
+            выраженности побочных эффектов:
+          </p>
+        </div>
+
+        <div class="container">
+          <div class="results-charts">
+            <div class="results-chart">
+              <div class="results-chart__graph">76%</div>
+              <p class="results-chart__text">
+                Урологов указали
+                <b>«ПЕРЕНОСИМОСТЬ»,</b>
+                как определяющий критерий
+                в выборе м-холиноблокатора
+                при ГМП <sup>1</sup>
+              </p>
+            </div>
+
+            <div class="results-chart">
+              <div class="results-chart__graph">61%</div>
+              <p class="results-chart__text">
+                Урологов считают
+                возможнсть титрования дозы
+                Дриптана дополнительным
+                преимуществом 
+                препарата <sup>1</sup>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+
+
+      <section class="notes">
+        <div class="notes__top">
+          <div class="container">
+            <h2 class="sr-only">Примечания</h2>
+            <ol class="notes__list">
+              <li>Опрос урологов по проблеме терапии ГМП, ноябрь 2019, doctornarabote.ru 108 респондентов.</li>
+
+              <li>
+                Goto M, Kato K, Kondo A, et al. Clinical effects of oxybutynin hydrochloride in the treatment of
+                unstable bladder and overactive neurogenic bladder: a long-term clinical trial [in Japanese]. Hinyokika
+                Kiyo 1988 Mar; 34: 541–50
+              </li>
+              
+              <li>
+                Roger R., Dmochowski, G Willy Davila, et al. Efficacy and safety of transdermal oxybutynin in patients
+                with urge and mixed urinary incontinence The Journal of urology 2002 DOI:10.1016/s0022-5347(05)64684-8
+              </li>
+              
+              <li>
+                Rudy D, Cline K, Harris R, Goldberg K, Dmochowski R. Multicenter Phase III trial studying trospium
+                chloride in patients withoveractive bladder. Urology 67, 275–280, 2006
+              </li>
+              
+              <li>
+                Chepple CR, Arano P, Bosch JL, De Ridder D, Kramer AE, Ridder A.M. Solifenacin appears effective and
+                well tolerated in patients with symptomatic idiopathic detrusor overactivity in placebo- and tolterodine-controlled phase 2 dose-finding study. BJU Int., 93, 71-77 (2004).
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="notes__foot">
+          <div class="container">
+            <figure class="notes-img">
+              <picture>
+                <source srcset="img/general/product-img.webp 1x,
+                                img/general/product-img@2x.webp 2x"
+                        type="image/webp">
+                <img src="img/general/product-img.png"
+                    srcset="img/general/product-img@2x.png 2x"
+                    alt="упаковка Дриптана">
+              </picture>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-top__row">
+            <div class="footer-top__name">Дриптан<sup>®</sup></div>
+            <p class="footer-top__info">П №014671/01 – 23.10.13</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-mid">
+        <div class="container">
+          <div class="footer-mid__top">
+            <p><b>Международное непатентованное название или группировочное название:</b> Оксибутинин</p>
+            <p><b>Лекарственная форма:</b> таблетки</p>
+            <p><b>Состав:</b></p>
+            <p>1 таблетка содержит:</p>
+            <p>Активное вещество: оксибуrинина гидрохлорид -5,00 мг.</p>
+            <p><b>Фармакотерапевтическая группа:</b> спазмолитическое средство.</p>
+            <p><b>АТХ:</b> G04BD04</p>
+          </div>
+
+
+          <div class="footer-mid__foot">
+            <p><b>Претензии по качеству направлять по адресу:</b></p>
+
+            <p>
+              ООО «Эбботт Лэбораториз»
+              125171 Москва. Ленинградское шоссе дом 16а. строение 1 Бизнес-центр «Метрополис»
+              Те.1.: +7 (495) 258 42 80
+              Факс: +7 (495) 258 42 8 1
+            </p>
+
+            <p>Интернет-адрес: <a href="mailto:abbott-russia@abbott.com">abbott-russia@abbott.com</a></p>
+
+            <p><b>DRI/RU/112019/95</b></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p>Имеются противопоказания. Ознакомьтесь с инструкцией</p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+
+
+
+  <!-- Scripts -->
+  <script src="js/vendor/jquery-3.3.1.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

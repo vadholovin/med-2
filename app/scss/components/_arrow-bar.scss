@@ -1,0 +1,81 @@
+/* ==========================================================================
+   #ARROW-BAR
+   ========================================================================== */
+
+.arrow-bar {
+  position: relative;
+  width: 100%;
+  max-width: 1220px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100px;
+  border-top: 10px solid $grey-border;
+}
+
+.arrow-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 80%;
+  transform: translate(-50%, 0);
+  border-left: 10px solid $grey-border;
+}
+
+.arrow-bar__arrow{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.arrow-bar__dots::before,
+.arrow-bar__dots::after {
+  content: '';
+}
+
+.arrow-bar__dots::before,
+.arrow-bar__dots::after,
+.arrow-bar__dot {
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: $bg-grey-lighter;
+}
+
+.arrow-bar__dots::before {
+  left: 0;
+  transform: translate(-50%, -70%);
+}
+
+.arrow-bar__dots::after {
+  right: 0;
+  transform: translate(50%, -70%);
+}
+
+.arrow-bar__dot {
+  left: 50%;
+  transform: translate(-50%, -70%);
+}
+
+
+.arrow-bar--therapy {
+  display: none;
+
+  @include for-size(sm-up) {
+    display: block;
+    margin-bottom: rem(30px);
+  }
+}
+
+.arrow-bar--efficiency {
+  display: none;
+
+  @include for-size(sm-up) {
+    display: block;
+    margin-bottom: rem(45px);
+  }
+}

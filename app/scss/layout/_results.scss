@@ -1,0 +1,41 @@
+/* ==========================================================================
+   #RESULTS
+   ========================================================================== */
+
+.results {
+
+}
+
+.results__title {
+  margin-bottom: rem(20px);
+}
+
+.results__subtitle {
+  margin-bottom: rem(56px);
+
+  @include for-size(lg-up) {
+    margin-bottom: rem(72px);
+  }
+}
+
+.results__img {
+  width: 80%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: rem(56px);
+
+  @include for-size(sm-up) {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  @include for-size(lg-up) {
+    max-width: 450px;
+    margin-bottom: rem(72px);
+  }
+
+  @include for-size(xl-up) {
+    max-width: 600px;
+  }
+}

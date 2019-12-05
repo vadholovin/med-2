@@ -1,0 +1,164 @@
+/* ==========================================================================
+   #EFFICIENCY
+   ========================================================================== */
+
+.efficiency {
+  display: none;
+
+  @include for-size(sm-up) {
+    display: block;
+  }
+}
+
+.efficiency__title {
+  font-weight: normal;
+  margin-bottom: rem(20px);
+}
+
+.efficiency__subtitle {
+  margin-bottom: 100px;
+}
+
+.efficiency-charts {
+  display: flex;
+  flex-wrap: wrap;
+  margin: rem(-50px -8px 60px -8px);
+}
+
+.efficiency-chart {
+  width: 100%;
+  margin-top: rem(50px);
+  padding-left: 8px;
+  padding-right: 8px;
+
+  @include for-size(sm-up) {
+    width: 50%;
+  }
+
+  @include for-size(lg-up) {
+    width: 25%;
+  }
+}
+
+.efficiency-graph {
+  display: flex;
+  width: 100%;
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: rem(35px);
+  font-weight: 600;
+  font-size: rem(20px);
+
+  @include for-size(xl-up) {
+    margin-bottom: rem(45px);
+    font-size: rem(24px);
+  }
+}
+
+.efficiency-graph__aside {
+  flex: none;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  width: 30px;
+
+  @include for-size(xl-up) {
+    width: 40px;
+  }
+}
+
+.efficiency-graph__aside span {
+  position: relative;
+  top: 12px;
+}
+
+.efficiency-graph__body {
+  flex-grow: 1;
+  position: relative;
+  max-width: 212px;
+  height: 180px;
+  padding-left: 15px;
+  border-bottom: 3px solid #000;
+}
+
+.efficiency-graph__body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 0;
+  height: 108%;
+  border-left: 3px solid #000;
+}
+
+.efficiency-graph__body-scale::before,
+.efficiency-graph__body-scale::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 15px;
+  height: 1px;
+  border-top: 3px solid #000;
+}
+
+.efficiency-graph__body-scale::before {
+  top: 24px;
+}
+
+.efficiency-graph__body-scale::after {
+  top: calc(50% + 12px);
+}
+
+.efficiency-graph__bar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+}
+
+.efficiency-graph__bar-value {
+  margin-bottom: 12px;
+}
+
+.efficiency-graph__bar-fill {
+  width: 50%;
+
+  &.green {
+    background-image: $gradient;
+  }
+
+  &.red {
+    background-image: $gradient-red;
+  }
+}
+
+.efficiency-graph__bar-fill--1-1 { height: 5%; }
+.efficiency-graph__bar-fill--1-4 { height: 20%; }
+.efficiency-graph__bar-fill--1-9 { height: 40%; }
+.efficiency-graph__bar-fill--2-7 { height: 75%; }
+
+.efficiency-chart__foot {
+  text-align: center;
+}
+
+.efficiency-chart__heading {
+  margin-bottom: rem(14px);
+  font-weight: 600;
+  font-size: rem(24px);
+
+  @include for-size(xl-up) {
+    font-size: rem(30px);
+  }
+}
+
+.efficiency-chart__notes {
+  font-size: rem(20px);
+
+  @include for-size(xl-up) {
+    font-size: rem(24px);
+  }
+}

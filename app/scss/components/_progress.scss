@@ -1,0 +1,42 @@
+/* ==========================================================================
+   #PROGRESS
+   ========================================================================== */
+
+.progress__wrapper {
+  position: relative;
+}
+
+.progress {
+  transform: rotate(-90deg);
+}
+
+.progress__meter {
+  fill: none;
+  stroke: #daf3cc;
+  stroke-width: 40;
+}
+
+.progress__value {
+  fill: none;
+  stroke: #4ec708;
+  stroke-width: 40;
+  stroke-linecap: round;
+}
+
+.progress__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 62.5%;
+  height: 62.5%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: rem(48px);
+  color: $text-green;
+  background-color: #fff;
+  box-shadow: $shadow-darker;
+}

@@ -1,0 +1,121 @@
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+.button {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  user-select: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: rem(15px);
+  line-height: 1.2;
+  font-weight: bold;
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
+  background-color: transparent;
+  overflow: hidden;
+  transition:
+    background-color $ease-main,
+    background-image $ease-main,
+    box-shadow $ease-main,
+    color $ease-main;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+
+  @include for-size(sm-up) {
+    font-size: rem(18px);
+  }
+
+  @include for-size(md-up) {
+    font-size: rem(20px);
+  }
+
+  @include for-size(lg-up) {
+    font-size: rem(24px);
+  }
+
+  @include for-size(xl-up) {
+    font-size: rem(26px);
+  }
+}
+
+.button__inner {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 55px;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  z-index: 2;
+
+  @include for-size(lg-up) {
+    min-height: 90px;
+  }
+}
+
+.button__wrapper {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.button--block {
+  display: block;
+  width: 100%;
+}
+
+.button--center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button--primary {
+  box-shadow: $shadow;
+  z-index: 0;
+  background-image: linear-gradient(180deg, #8e2c3b 0%, #8f2837 0.01%, #671a26 100%);
+}
+
+.button--secondary {
+  box-shadow: $shadow;
+  z-index: 0;
+  background-image: linear-gradient(180deg, #39434d 0%, #232c35 100%);
+}
+
+.button--primary::after,
+.button--secondary::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  border-radius: 50%;
+  background: #fff;
+  transition: all .5s ease-out;
+  z-index: 1;
+}
+
+.button--primary:hover,
+.button--secondary:hover {
+
+  &::after {
+    width: 200%;
+    height: 500%;
+    opacity: 0.15;
+  }
+}

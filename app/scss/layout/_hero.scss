@@ -1,0 +1,38 @@
+/* ==========================================================================
+   #HERO
+   ========================================================================== */
+
+.hero {
+  padding-top: rem(46px);
+  padding-bottom: rem(34px);
+  background-color: $bg-green-light;
+
+  @include for-size(md-up) {
+    padding-top: rem(86px);
+    padding-bottom: rem(86px);
+  }
+}
+
+.hero__title {
+  font-size: rem(50px);
+  color: #fff;
+
+  @include for-size(sm-up) {
+    font-size: calc(1rem + 5vw);
+  }
+
+  @include for-size(xl-up) {
+    font-size: rem(100px);
+  }
+}
+
+.hero__title--smaller {
+  display: block;
+  margin-top: rem(20px);
+  font-weight: normal;
+  font-size: rem(18px);
+
+  @include for-size(md-up) {
+    display: none;
+  }
+}

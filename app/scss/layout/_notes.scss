@@ -1,0 +1,76 @@
+/* ==========================================================================
+   #NOTES
+   ========================================================================== */
+
+.notes__top {
+  padding-bottom: 165px;
+  
+
+  @include for-size(sm-up) {
+    padding-bottom: 240px;
+  }
+
+  @include for-size(lg-up) {
+    padding-bottom: 280px;
+  }
+
+  @include for-size(xl-up) {
+    padding-bottom: 320px;
+  }
+}
+
+.notes__foot {
+  position: relative;
+  background-color: $bg-green-light;
+  height: 66px;
+
+  @include for-size(sm-up) {
+    height: 120px;
+  }
+}
+
+.notes__list {
+  counter-reset: counter;
+  text-transform: none;
+  font-size: rem(16px);
+  
+  @include for-size(md-up) {
+    font-size: rem(18px);
+  }
+  
+  @include for-size(lg-up) {
+    font-size: rem(20px);
+  }
+
+  @include for-size(xl-up) {
+    font-size: rem(26px);
+  }
+}
+
+.notes__list li + li {
+  margin-top: rem(26px);
+
+  @include for-size(lg-up) {
+    margin-top: rem(36px);
+  }
+}
+
+.notes__list li::before {
+  counter-increment: counter;
+  content: counters(counter, '.') '. ';
+  font-weight: bold;
+}
+
+.notes-img {
+  position: absolute;
+  width: 240px;
+  left: 50%;
+  bottom: 42px;
+  bottom: 6px;
+  transform: translate(-50%, 0);
+
+  @include for-size(sm-up) {
+    width: 75%;
+    max-width: 496px;
+  }
+}

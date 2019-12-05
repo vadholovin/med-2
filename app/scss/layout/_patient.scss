@@ -1,0 +1,136 @@
+/* ==========================================================================
+   #PATIENT
+   ========================================================================== */
+
+.patient {
+  padding-top: rem(50px);
+
+  @include for-size(md-up) {
+    padding-top: rem(80px);
+  }
+
+  @include for-size(xl-up) {
+    padding-top: rem(100px);
+  }
+
+}
+
+.patient__title {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: rem(70px);
+
+  @include for-size(xl-up) {
+    margin-bottom: rem(86px);
+  }
+}
+
+.patient-charts {
+  display: flex;
+  flex-wrap: wrap;
+  margin: rem( -50px -8px 50px -8px);
+
+  @include for-size(md-up) {
+    margin-left: rem(-15px);
+    margin-right: rem(-15px);
+  }
+
+  @include for-size(lg-up) {
+    margin-bottom: rem(70px);
+  }
+
+  @include for-size(xl-up) {
+    margin-bottom: rem(100px);
+  }
+}
+
+.patient-charts__item {
+  width: 100%;
+  margin-top: rem(50px);
+  padding-left: 8px;
+  padding-right: 8px;
+  text-align: center;
+
+  @media (min-width: 380px) {
+    width: 50%;
+  }
+
+  @include for-size(sm-up) {
+    width: 25%;
+  }
+
+  @include for-size(md-up) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.patient-charts__graph {
+  position: relative;
+  max-width: 192px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: rem(30px);
+  background-color: rgba($bg-green-light, 0.2);
+
+  @media (min-width: 380px) {
+    max-width: none;
+  }
+}
+
+.patient-charts__graph::before {
+  content: '';
+  float: left;
+  padding-top: 100%;
+}
+
+.patient-charts__graph::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.patient-charts__graph-value {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: rem(40px);
+  color: $text-green;
+  z-index: 2;
+  
+  @include for-size(lg-up) {
+    font-size: rem(48px);
+  }
+}
+
+.patient-charts__graph--filled .patient-charts__graph-value {
+  color: #fff;
+}
+
+.patient-charts__graph-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-image: $gradient;
+}
+
+.patient-charts__graph-fill--6-5 { height: 16%; }
+.patient-charts__graph-fill--43 { height: 77%; }
+.patient-charts__graph-fill--44 { height: 78%; }
+
+.patient-charts__heading {
+  font-size: rem(20px);
+  text-transform: none;
+
+  b {
+    font-weight: 600;
+  }
+
+  @include for-size(lg-up) {
+    font-size: rem(28px);
+  }
+}
