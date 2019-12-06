@@ -83,13 +83,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: rem(-50px -4px 40px -4px);
+  margin: rem(-50px -4px 50px -4px);
 
   > * {
     width: 100%;
 
     @include for-size(sm-up) {
       width: 50%;
+      margin-bottom: rem(40px);
     }
 
     @include for-size(md-up) {
@@ -107,6 +108,21 @@
   
   .progress__wrapper {
     margin-bottom: rem(20px);
+  }
+
+  .progress__meter,
+  .progress__value {
+
+    @include for-size(xs-only) {
+      stroke-width: 30px;
+    }
+  }
+
+  .progress__text {
+    @include for-size(xs-only) {
+      width: 68%;
+      height: 68%;
+    }
   }
 }
 

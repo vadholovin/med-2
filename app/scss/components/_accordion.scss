@@ -1,0 +1,184 @@
+/* ==========================================================================
+   #ACCORDION
+   ========================================================================== */
+
+.accordion {
+  width: 100%;
+}
+
+.accordion-item {
+  
+}
+
+.accordion__toggler {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: rem(20px 0);
+  border: none;
+  border-bottom: 1px solid rgba(#000, 0.1);
+  font-size: 1rem;
+  text-align: left;
+  text-transform: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $highlight;
+  }
+
+  @include for-size(md-up) {
+    padding: rem(30px 20px);
+    font-size: rem(20px);
+  }
+
+  @include for-size(xl-up) {
+    padding: rem(40px 20px);
+    font-size: rem(26px);
+  }
+}
+
+.accordion-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include for-size(md-up) {
+    right: 20px;
+    width: 44px;
+    height: 44px;
+  }
+  
+  svg {
+    width: 18px;
+    pointer-events: none;
+
+    @include for-size(md-up) {
+      width: 24px;
+    }
+  }
+  
+  path {
+    fill: currentColor;
+  }
+}
+
+.accordion__toggler.is-active {
+  border-bottom: none;
+
+  .accordion-icon {
+    background-color: $bg-green-light;
+    transition: background-color $ease-main;
+  }
+
+  path {
+    fill: #fff;
+  }
+
+  .accordion-icon__bar {
+    opacity: 0;
+    transition: opacity $ease-main;
+  }
+}
+
+.accordion-item__content {
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition:
+    visibility $ease-main,
+    opacity $ease-main,
+    height $ease-main;
+}
+
+.accordion-item__content.is-open {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+  overflow: visible;
+
+  padding-top: rem(30px);
+  padding-bottom: rem(30px);
+  font-size: 1rem;
+  background: #FFFFFF;
+
+  @include for-size(md-up) {
+    padding-left: rem(20px);
+    font-size: rem(20px);
+  }
+
+  @include for-size(lg-up) {
+    padding-top: rem(50px);
+    padding-bottom: rem(50px);
+  }
+
+  @include for-size(xl-up) {
+    font-size: rem(24px);
+  }
+}
+
+.accordion-item__content.is-open::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100vw;
+  height: calc(100% - 10px);
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.accordion-item__content {
+
+  > * {
+    margin-bottom: rem(20px);
+
+    @include for-size(lg-up) {
+      margin-bottom: rem(30px);
+    }
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
+  li + li {
+    margin-top: rem(20px);
+
+    @include for-size(lg-up) {
+      margin-top: rem(30px);
+    }
+  }
+
+  h3, h4, h5, h6 {
+    font-weight: bold;
+    text-transform: none;
+  }
+
+  ul li {
+    position: relative;
+    padding-left: 30px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0.6em;
+      left: 0;
+      width: 10px;
+      height: 0;
+      border-top: 1px solid #000000;
+    }
+  }
+}

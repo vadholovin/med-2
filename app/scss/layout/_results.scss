@@ -8,10 +8,18 @@
 
 .results__title {
   margin-bottom: rem(20px);
+
+  @include for-size(xs-only) {
+    display: none;
+  }
 }
 
 .results__subtitle {
   margin-bottom: rem(56px);
+
+  @include for-size(xs-only) {
+    display: none;
+  }
 
   @include for-size(lg-up) {
     margin-bottom: rem(72px);
@@ -37,5 +45,110 @@
 
   @include for-size(xl-up) {
     max-width: 600px;
+  }
+}
+
+.results__info-wrapper {
+  margin-bottom: rem(30px);
+  box-shadow: 0 -25px 50px rgba(0, 0, 0, 0.04);
+
+  @include for-size(md-up) {
+    box-shadow: $shadow;
+    margin-bottom: rem(70px);
+  }
+
+  @include for-size(xl-up) {
+    margin-bottom: rem(90px);
+  }
+}
+
+.results__info {
+  padding-top: rem(50px);
+  padding-bottom: rem(50px);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: rem(24px);
+  
+  @include for-size(md-up) {
+    font-size: rem(28px);
+  }
+
+  @include for-size(xl-up) {
+    font-size: rem(30px);
+  }
+}
+
+.results-charts {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: rem(-70px);
+  margin-bottom: rem(40px);
+
+  @include for-size(md-up) {
+    margin-bottom: rem(60px);
+  }
+
+  @include for-size(lg-up) {
+    margin-bottom: rem(100px);
+  }
+}
+
+.results-chart {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: rem(70px);
+  padding-left: 4px;
+  padding-right: 4px;
+  
+  @include for-size(sm-up) {
+    width: 50%;
+  }
+}
+
+.results-chart__graph {
+  margin-bottom: rem(20px);
+
+  @include for-size(lg-up) {
+    margin-bottom: rem(50px);
+  }
+}
+
+.results-chart__graph {
+  width: 224px;
+  height: 224px;
+
+  @include for-size(md-up) {
+    width: 310px;
+    height: 310px;
+  }
+}
+
+.results-chart__graph .progress__meter {
+  stroke: none;
+  stroke-width: 20;
+}
+
+.results-chart__graph .progress__value {
+  stroke-width: 20;
+}
+
+.results-chart__graph .progress__text {
+
+  @include for-size(xs-only) {
+    width: 70%;
+    height: 70%;
+  }
+}
+
+.results-chart__text {
+  width: 100%;
+  max-width: 470px;
+  font-size: rem(24px);
+
+  @include for-size(lg-up) {
+    font-size: rem(30px);
   }
 }

@@ -8,7 +8,8 @@
 
 .footer-top {
   font-size: rem(16px);
-  background-color: $bg-grey;
+  background-color: $bg-green;
+  box-shadow: $shadow-darker;
   color: #fff;
 
   @include for-size(md-up) {
@@ -24,8 +25,8 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding-top: rem(22px);
-  padding-bottom: rem(22px);
+  padding-top: rem(25px);
+  padding-bottom: rem(25px);
   
 
   @include for-size(xs-only) {
@@ -53,41 +54,92 @@
 
 
 .footer-mid {
-  padding-top: rem(30px);
-  padding-bottom: rem(50px);
-  font-size: rem(16px);
+  padding-top: rem(46px);
+  padding-bottom: rem(70px);
+  
+  @include for-size(lg-up) {
+    padding-top: rem(70px);
+    padding-bottom: rem(100px);
+  }
+}
+
+.footer-mid__top {
+  margin-bottom: rem(48px);
+  line-height: 1.58;
+  font-size: rem(20px);
 
   @include for-size(xs-only) {
     text-align: center;
   }
-
-  @include for-size(xl-up) {
-    padding-top: rem(100px);
-    padding-bottom: rem(60px);
-    font-size: rem(20px);
+  
+  @include for-size(sm-up) {
+    font-size: rem(24px);
   }
 
   p + p {
-    margin-top: rem(24px);
 
-    @include for-size(lg-up) {
-      margin-top: rem(48px);
+    @include for-size(xs-only) {
+      margin-top: rem(24px);
+    }
+  }
+
+  span {
+
+    @include for-size(xs-only) {
+      display: inline-block;
+      width: 100%;
     }
   }
 }
 
-.footer-mid__foot {
-  margin-top: rem(56px);
+.footer-accordion {
+  margin-bottom: rem(70px);
 
   @include for-size(lg-up) {
-    margin-top: rem(100px);
+    margin-bottom: rem(100px);
   }
+}
+
+.footer-mid__foot {
+  font-size: rem(20px);
+
+  @include for-size(xs-only) {
+    text-align: center;
+  }
+  
+  @include for-size(sm-up) {
+    font-size: rem(24px);
+  }
+}
+
+.footer-mid__foot-heading {
+  margin-bottom: rem(30px);
+
+  @include for-size(xl-up) {
+    margin-bottom: rem(40px);
+  }
+}
+
+.footer-mid__foot-address {
+  margin-bottom: rem(24px);
+}
+
+.footer-mid__foot-email {
+  margin-bottom: rem(50px);
+  
+  @include for-size(xl-up) {
+    margin-bottom: rem(82px);
+  }
+}
+
+.footer-mid__foot-email span {
+  display: inline-block;
 }
 
 .footer-bottom {
   padding-top: rem(30px);
   padding-bottom: rem(30px);
-  background-color: $bg-grey;
+  background-color: $bg-green;
   color: #fff;
   text-align: center;
 

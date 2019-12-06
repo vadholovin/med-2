@@ -9,7 +9,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,800|Roboto:400,900&display=swap&subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" href="libs/jquery-modal/jquery.modal.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -364,19 +363,29 @@
           </figure>
         </div>
 
-        <div class="container">
-          <p class="results__info">
-            Возможность гибкого дозирования позволяет подходить индивидуального к
-            каждому больному в зависимости 
-            от тяжести симптоматики и
-            выраженности побочных эффектов:
-          </p>
+        <div class="results__info-wrapper">
+          <div class="container">
+            <p class="results__info">
+              Возможность гибкого дозирования позволяет подходить индивидуального к
+              каждому больному в зависимости 
+              от тяжести симптоматики и
+              выраженности побочных эффектов:
+            </p>
+          </div>
         </div>
 
         <div class="container">
           <div class="results-charts">
             <div class="results-chart">
-              <div class="results-chart__graph">76%</div>
+              <div class="results-chart__graph">
+                <div class="progress__wrapper">
+                  <svg class="progress js-progress" viewBox="0 0 310 310" data-progress-value="76">
+                    <circle class="progress__meter" cx="155" cy="155" r="135" />
+                    <circle class="progress__value" cx="155" cy="155" r="135" />
+                  </svg>
+                  <div class="progress__text">76%</div>
+                </div>
+              </div>
               <p class="results-chart__text">
                 Урологов указали
                 <b>«ПЕРЕНОСИМОСТЬ»,</b>
@@ -387,7 +396,15 @@
             </div>
 
             <div class="results-chart">
-              <div class="results-chart__graph">61%</div>
+              <div class="results-chart__graph">
+                <div class="progress__wrapper">
+                  <svg class="progress js-progress" viewBox="0 0 310 310" data-progress-value="61">
+                    <circle class="progress__meter" cx="155" cy="155" r="135" />
+                    <circle class="progress__value" cx="155" cy="155" r="135" />
+                  </svg>
+                  <div class="progress__text">61%</div>
+                </div>
+              </div>
               <p class="results-chart__text">
                 Урологов считают
                 возможнсть титрования дозы
@@ -465,27 +482,114 @@
       <div class="footer-mid">
         <div class="container">
           <div class="footer-mid__top">
-            <p><b>Международное непатентованное название или группировочное название:</b> Оксибутинин</p>
-            <p><b>Лекарственная форма:</b> таблетки</p>
-            <p><b>Состав:</b></p>
-            <p>1 таблетка содержит:</p>
-            <p>Активное вещество: оксибуrинина гидрохлорид -5,00 мг.</p>
-            <p><b>Фармакотерапевтическая группа:</b> спазмолитическое средство.</p>
-            <p><b>АТХ:</b> G04BD04</p>
+            <p><b>Международное непатентованное название или группировочное название:</b> <span>Оксибутинин</span></p>
+            <p><b>Лекарственная форма:</b> <span>таблетки</span></p>
+            <p>
+              <b>Состав:</b><br>
+              <span>
+                1 таблетка содержит:<br>
+                Активное вещество: оксибуrинина гидрохлорид -5,00 мг.
+              </span>
+            </p>
+            <p><b>Фармакотерапевтическая группа:</b> <span>спазмолитическое средство.</span></p>
+            <p><b>АТХ:</b> <span>G04BD04</span></p>
           </div>
+
+          <ul class="accordion footer-accordion js-accordion">
+            <li class="accordion-item">
+              <h3 class="accordion-item__title">
+                <button class="accordion__toggler is-active" aria-controls="accordion-item-1" aria-expanded="true">
+                  Показания к применению
+                  <span class="accordion-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="accordion-icon__bar" fill-rule="evenodd" clip-rule="evenodd" d="M10.6667 24V0H13.3334V24H10.6667Z" fill="#000000"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10.6665L24 10.6665L24 13.3332L-1.16564e-07 13.3332L0 10.6665Z" fill="#000000"/>
+                    </svg>
+                  </span>
+                </button>
+              </h3>
+              <div class="accordion-item__content is-open" id="accordion-item-1">
+                <h4>Взрослые:</h4>
+                <ul>
+                  <li>
+                    Недержание мочи, неотложные позывы к мочеиспусканию и учащенное мочеиспускание,
+                    связанные с нестабильностью функции мочевого пузыря, возникшей либо в результате
+                    расстройств нейрогенного характера (гиперрефлексии детрузора) при таких заболеваниях как
+                    рассеянный склероз и spina bifida, либо
+                    вследствие идиопатических нарушений функции детрузора (моторное неотложное недержание мочи);
+                  </li>
+  
+                  <li>
+                    Гиперактивность мочевого пузыря, возникающая после хирургическойоперации на мочевом
+                    пузыре или предстательной железе, или при сопутствующем цистите.
+                  </li>
+                </ul>
+              </div>
+            </li>
+          
+            <li class="accordion-item">
+              <h3 class="accordion-item__title">
+                <button class="accordion__toggler" aria-controls="accordion-item-2" aria-expanded="false">
+                  Противопоказания
+                  <span class="accordion-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="accordion-icon__bar" fill-rule="evenodd" clip-rule="evenodd" d="M10.6667 24V0H13.3334V24H10.6667Z" fill="#000000"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10.6665L24 10.6665L24 13.3332L-1.16564e-07 13.3332L0 10.6665Z" fill="#000000"/>
+                    </svg>
+                  </span>
+                </button>
+              </h3>
+              <div class="accordion-item__content" id="accordion-item-2" hidden>
+              </div>
+            </li>
+
+            <li class="accordion-item">
+              <h3 class="accordion-item__title">
+                <button class="accordion__toggler" aria-controls="accordion-item-3" aria-expanded="false">
+                  Способ применения и дозы
+                  <span class="accordion-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="accordion-icon__bar" fill-rule="evenodd" clip-rule="evenodd" d="M10.6667 24V0H13.3334V24H10.6667Z" fill="#000000"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10.6665L24 10.6665L24 13.3332L-1.16564e-07 13.3332L0 10.6665Z" fill="#000000"/>
+                    </svg>
+                  </span>
+                </button>
+              </h3>
+              <div class="accordion-item__content" id="accordion-item-3" hidden>
+              </div>
+            </li>
+
+            <li class="accordion-item">
+              <h3 class="accordion-item__title">
+                <button class="accordion__toggler" aria-controls="accordion-item-4" aria-expanded="false">
+                  Побочные эффекты
+                  <span class="accordion-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="accordion-icon__bar" fill-rule="evenodd" clip-rule="evenodd" d="M10.6667 24V0H13.3334V24H10.6667Z" fill="#000000"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10.6665L24 10.6665L24 13.3332L-1.16564e-07 13.3332L0 10.6665Z" fill="#000000"/>
+                    </svg>
+                  </span>
+                </button>
+              </h3>
+              <div class="accordion-item__content" id="accordion-item-4" hidden>
+              </div>
+            </li>
+          
+            
+          </ul>
 
 
           <div class="footer-mid__foot">
-            <p><b>Претензии по качеству направлять по адресу:</b></p>
+            <p class="footer-mid__foot-heading"><b>Претензии по качеству направлять по адресу:</b></p>
 
-            <p>
-              ООО «Эбботт Лэбораториз»
-              125171 Москва. Ленинградское шоссе дом 16а. строение 1 Бизнес-центр «Метрополис»
-              Те.1.: +7 (495) 258 42 80
+            <p class="footer-mid__foot-address">
+              ООО «Эбботт Лэбораториз»<br>
+              125171 Москва. Ленинградское шоссе дом 16а. строение 1 Бизнес-центр «Метрополис»<br>
+              Те.1.: +7 (495) 258 42 80<br>
               Факс: +7 (495) 258 42 8 1
             </p>
 
-            <p>Интернет-адрес: <a href="mailto:abbott-russia@abbott.com">abbott-russia@abbott.com</a></p>
+            <p class="footer-mid__foot-email">Интернет-адрес: <a href="mailto:abbott-russia@abbott.com"><span>abbott-russia@abbott.com</span></a></p>
 
             <p><b>DRI/RU/112019/95</b></p>
           </div>
