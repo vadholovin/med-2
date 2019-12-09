@@ -871,19 +871,19 @@ body {
 }
 
 .hero__title {
-  font-size: 3.125rem;
+  font-size: 1.625rem;
   color: #fff;
 }
 
 @media (min-width: 600px) {
   .hero__title {
-    font-size: calc(1rem + 5vw);
+    font-size: calc(1rem + 3.5vw);
   }
 }
 
 @media (min-width: 1440px) {
   .hero__title {
-    font-size: 6.25rem;
+    font-size: 4.375rem;
   }
 }
 

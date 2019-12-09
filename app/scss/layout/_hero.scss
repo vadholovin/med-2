@@ -14,15 +14,15 @@
 }
 
 .hero__title {
-  font-size: rem(50px);
+  font-size: rem(26px);
   color: #fff;
 
   @include for-size(sm-up) {
-    font-size: calc(1rem + 5vw);
+    font-size: calc(1rem + 3.5vw);
   }
 
   @include for-size(xl-up) {
-    font-size: rem(100px);
+    font-size: rem(70px);
   }
 }
 
